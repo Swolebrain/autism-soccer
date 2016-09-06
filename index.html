@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Autism Soccer</title>
+  <link rel='stylesheet' href='css/bootstrap.min.css' />
+  <link rel='stylesheet' href='css/font-awesome.css' />
+  <link rel="stylesheet" href="css/ng-mobile-menu.min.css" />
+  <link rel='stylesheet' href='css/style.css' />
+</head>
+<body ng-app='AutismSoccer'>
+  <div ng-controller='NavController'>
+    <a ng-click='toggleNav()' class='hamburger'>
+      <i class="fa fa-bars fa-2" aria-hidden="true"></i>
+    </a>
+    <div class='navbar'>
+      <h2 class='text-center'>Training Selection</h2>
+      <div class='list-group'>
+        <a class="list-group-item" href='{{exercise.url}}'
+          ng-repeat='exercise in exercises'>
+          {{exercise.name}}
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id='container'>
+    <img class='logo' src='img\logo-AS.png' />
+    <h1 class='text-center'>Autism Soccer Trainer</h1>
+    <div ng-view></div>
+  </div>
+
+
+
+  <script src='bower_components\angular\angular.min.js'></script>
+  <script src='bower_components\angular-route\angular-route.min.js'></script>
+  <script src='bower_components\angular-animate\angular-animate.min.js'></script>
+  <script src='js/prod.js'></script>
+</body>
+</html>
