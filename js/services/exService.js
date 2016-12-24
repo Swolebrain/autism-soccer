@@ -8,6 +8,8 @@ module.exports = [function(){
     videoUrl: '../../videos/situps.mp4'},
     {name:'ex4', url:'#/ex/4', description: '',
     videoUrl: '../../videos/smiling.mp4'},
+    {name:'squat', url:'#/ex/5', description: 'este es un squat',
+    videoUrl: '../../videos/situps.mp4'},
   ]
   function getExercise(id){
     id = parseInt(id);
